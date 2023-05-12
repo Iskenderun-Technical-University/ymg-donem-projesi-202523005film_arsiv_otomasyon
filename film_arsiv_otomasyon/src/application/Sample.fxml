@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="giris_form" prefHeight="563.0" prefWidth="602.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <ImageView fitHeight="563.0" fitWidth="610.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../../resim/Ekran%20görüntüsü%202023-05-12%20195037.png" />
+         </image>
+      </ImageView>
+      <Pane layoutX="-14.0" layoutY="-6.0" prefHeight="563.0" prefWidth="610.0">
+         <children>
+            <TextField fx:id="textbox1" layoutX="189.0" layoutY="269.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-color: #CCCCCC;" />
+            <Label layoutX="117.0" layoutY="321.0" text="Password" textFill="#e8e008" />
+            <Label layoutX="116.0" layoutY="273.0" text="Username" textFill="#e8e008" />
+            <TextField fx:id="textbox11" layoutX="189.0" layoutY="317.0" prefHeight="26.0" prefWidth="233.0" style="-fx-background-color: #CCCCCC;" />
+            <Button layoutX="378.0" layoutY="385.0" mnemonicParsing="false" text="Login" />
+            <Button layoutX="279.0" layoutY="385.0" mnemonicParsing="false" text="Sign in" />
+            <Label layoutX="288.0" layoutY="355.0" prefHeight="18.0" prefWidth="144.0" text="Forgot your password?" textFill="#2fff0f" />
+            <Button layoutX="189.0" layoutY="385.0" mnemonicParsing="false" text="Admin " />
+            <ImageView fitHeight="26.0" fitWidth="40.0" layoutX="189.0" layoutY="269.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../resim/Sample_User_Icon.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="26.0" fitWidth="40.0" layoutX="189.0" layoutY="317.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../resim/2889676.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="137.0" fitWidth="135.0" layoutX="238.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../resim/cccccccccccccc.png" />
+               </image>
+            </ImageView>
+            <TextField fx:id="textbox12" layoutX="199.0" layoutY="204.0" prefHeight="27.0" prefWidth="214.0" style="-fx-background-color: #7D46EB;" text="    WELCOME TO BILIR'S ARCHİVE">
+               <font>
+                  <Font name="Corbel" size="18.0" />
+               </font>
+            </TextField>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
