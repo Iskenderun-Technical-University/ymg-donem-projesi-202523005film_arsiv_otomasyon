@@ -1,4 +1,4 @@
-module film_arsiv_otomasyon {
+module movie_archive {
 	requires javafx.controls;
 	requires javafx.fxml;
 	

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane fx:id="stk" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.SampleController">
+   <children>
+      <AnchorPane prefHeight="415.0" prefWidth="533.0">
+         <children>
+            <AnchorPane fx:id="layer1" layoutX="355.0" prefHeight="600.0" prefWidth="465.0">
+               <children>
+                  <Label fx:id="lbl1" alignment="CENTER" layoutX="157.0" layoutY="69.0" prefHeight="52.0" prefWidth="151.0" text="Create Account" textFill="#006ec3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="git" fitHeight="45.0" fitWidth="48.0" layoutX="218.0" layoutY="520.0" onMouseClicked="#git_click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resim/github.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="yt" fitHeight="45.0" fitWidth="57.0" layoutX="280.0" layoutY="522.0" onMouseClicked="#yt_click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resim/indir%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="mail" fitHeight="39.0" fitWidth="38.0" layoutX="356.0" layoutY="523.0" onMouseClicked="#mail_click" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resim/618246_outlook_2000x2000.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="lbl2" alignment="CENTER" layoutX="181.0" layoutY="470.0" prefHeight="52.0" prefWidth="283.0" text="Is there a problem? You can reach me from here" textFill="#006ec3">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt1" layoutX="105.0" layoutY="238.0" prefHeight="25.0" prefWidth="210.0" promptText="E-mail" />
+                  <TextField fx:id="txt2" layoutX="105.0" layoutY="288.0" prefHeight="25.0" prefWidth="210.0" promptText="Name" />
+                  <PasswordField fx:id="txt3" layoutX="105.0" layoutY="329.0" prefHeight="25.0" prefWidth="210.0" promptText="Password" />
+                  <Button fx:id="btn1" layoutX="154.0" layoutY="406.0" mnemonicParsing="false" onAction="#btn1_click" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #FF1F1F;" text="Sign İn" />
+                  <Button fx:id="btn11" layoutX="154.0" layoutY="406.0" mnemonicParsing="false" onAction="#btn11_click" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #FF1F1F;" text="Sign up" />
+                  <Label fx:id="lbl11" alignment="CENTER" layoutX="91.0" layoutY="69.0" prefHeight="52.0" prefWidth="283.0" text="Sign in to Bilir's Archive" textFill="#006ec3">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="layer2" layoutY="-1.0" prefHeight="600.0" prefWidth="348.0" style="-fx-background-color: #006EC3;">
+               <children>
+                  <Label fx:id="lbl3" alignment="CENTER" layoutX="57.0" layoutY="77.0" prefHeight="52.0" prefWidth="231.0" text="Welcome Back!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="logo" fitHeight="93.0" fitWidth="107.0" layoutX="126.0" layoutY="176.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../../resim/cccccccccccccc.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btn3" layoutX="97.0" layoutY="310.0" mnemonicParsing="false" onAction="#btn3_click" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #FF1F1F;" text="Sign İn" />
+                  <Label fx:id="lbl4" alignment="CENTER" layoutX="99.0" layoutY="129.0" prefHeight="26.0" prefWidth="151.0" text="to Bilir's Archive" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl5" alignment="CENTER" layoutX="65.0" layoutY="77.0" prefHeight="52.0" prefWidth="231.0" text="Hello Friend!" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl6" alignment="CENTER" layoutY="129.0" prefHeight="28.0" prefWidth="352.0" text="Enter your personal deatils " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lbl7" alignment="CENTER" layoutX="5.0" layoutY="148.0" prefHeight="28.0" prefWidth="352.0" text="and join Bilir's Archive" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btn2" layoutX="97.0" layoutY="310.0" mnemonicParsing="false" onAction="#btn2_click" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #FF1F1F;" text="Sign Up" />
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
