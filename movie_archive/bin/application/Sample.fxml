@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -21,12 +22,12 @@
                         <Font name="System Bold" size="19.0" />
                      </font>
                   </Label>
-                  <ImageView fx:id="git" fitHeight="45.0" fitWidth="48.0" layoutX="218.0" layoutY="520.0" onMouseClicked="#git_click" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="git" fitHeight="45.0" fitWidth="48.0" layoutX="194.0" layoutY="520.0" onMouseClicked="#git_click" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../resim/github.png" />
                      </image>
                   </ImageView>
-                  <ImageView fx:id="yt" fitHeight="45.0" fitWidth="57.0" layoutX="280.0" layoutY="522.0" onMouseClicked="#yt_click" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fx:id="yt" fitHeight="45.0" fitWidth="57.0" layoutX="266.0" layoutY="523.0" onMouseClicked="#yt_click" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@../../../../resim/indir%20(1).png" />
                      </image>
@@ -51,6 +52,10 @@
                         <Font name="System Bold" size="19.0" />
                      </font>
                   </Label>
+                  <Button fx:id="btn21" layoutX="154.0" layoutY="455.0" mnemonicParsing="false" onAction="#btn21_click" prefHeight="30.0" prefWidth="151.0" style="-fx-background-color: #FF1F1F;" text="Adminstrator" />
+                  <Hyperlink fx:id="link" layoutX="202.0" layoutY="531.0" onAction="#openlink" prefHeight="24.0" prefWidth="30.0" />
+                  <Hyperlink fx:id="link1" layoutX="280.0" layoutY="532.0" onAction="#openlink1" prefHeight="24.0" prefWidth="30.0" />
+                  <Hyperlink fx:id="link2" layoutX="360.0" layoutY="531.0" onAction="#openlink2" prefHeight="24.0" prefWidth="30.0" />
                </children>
             </AnchorPane>
             <AnchorPane fx:id="layer2" layoutY="-1.0" prefHeight="600.0" prefWidth="348.0" style="-fx-background-color: #006EC3;">

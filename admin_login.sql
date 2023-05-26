@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 26 May 2023, 20:47:42
+-- Üretim Zamanı: 26 May 2023, 20:47:58
 -- Sunucu sürümü: 10.4.28-MariaDB
 -- PHP Sürümü: 8.1.17
 
@@ -24,47 +24,41 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Tablo için tablo yapısı `login_form`
+-- Tablo için tablo yapısı `admin_login`
 --
 
-CREATE TABLE `login_form` (
-  `user_id` int(11) NOT NULL,
-  `user_name` varchar(50) NOT NULL,
-  `user_mail` varchar(50) NOT NULL,
-  `user_password` varchar(50) NOT NULL
+CREATE TABLE `admin_login` (
+  `admin_id` int(11) NOT NULL,
+  `admin_name` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_turkish_ci;
 
 --
--- Tablo döküm verisi `login_form`
+-- Tablo döküm verisi `admin_login`
 --
 
-INSERT INTO `login_form` (`user_id`, `user_name`, `user_mail`, `user_password`) VALUES
-(1, 'bleda', 'bleda@hotmail.com', 'a'),
-(2, 'semanur', 'sema@hotmail.com', 'b'),
-(10, 'a', '@', 'c'),
-(11, 'c', 'b', 'a'),
-(12, 'b', 'bleda', 'b'),
-(16, 'bleda', 'a', 'b');
+INSERT INTO `admin_login` (`admin_id`, `admin_name`, `password`) VALUES
+(1, 'admin', 'a');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
 --
 
 --
--- Tablo için indeksler `login_form`
+-- Tablo için indeksler `admin_login`
 --
-ALTER TABLE `login_form`
-  ADD PRIMARY KEY (`user_id`);
+ALTER TABLE `admin_login`
+  ADD PRIMARY KEY (`admin_id`);
 
 --
 -- Dökümü yapılmış tablolar için AUTO_INCREMENT değeri
 --
 
 --
--- Tablo için AUTO_INCREMENT değeri `login_form`
+-- Tablo için AUTO_INCREMENT değeri `admin_login`
 --
-ALTER TABLE `login_form`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+ALTER TABLE `admin_login`
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
