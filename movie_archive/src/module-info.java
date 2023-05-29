@@ -6,4 +6,5 @@ module movie_archive {
 	requires java.desktop;
 	
 	opens application to javafx.graphics, javafx.fxml;
+	exports application;
 }
