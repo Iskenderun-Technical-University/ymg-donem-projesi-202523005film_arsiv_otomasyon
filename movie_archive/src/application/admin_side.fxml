@@ -3,6 +3,7 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -51,13 +52,15 @@
             </ImageView>
             <TableView fx:id="comments" layoutX="175.0" layoutY="2.0" prefHeight="399.0" prefWidth="827.0">
               <columns>
-                  <TableColumn fx:id="user_id" prefWidth="81.0" text="kullanıcı_id" />
-                <TableColumn fx:id="usr_name" prefWidth="152.0" text="Adı" />
-                  <TableColumn fx:id="commennts" prefWidth="218.0" text="yorumu" />
-                  <TableColumn fx:id="points" prefWidth="185.0" text="puanı" />
+                  <TableColumn fx:id="comment_id" prefWidth="66.0" text="comment_id" />
+                  <TableColumn fx:id="movie1_id" prefWidth="111.0" text="film_id" />
+                  <TableColumn fx:id="user_id" prefWidth="94.0" text="kullanıcı_id" />
+                <TableColumn fx:id="usr_name" prefWidth="177.0" text="Adı" />
+                  <TableColumn fx:id="commennts" prefWidth="298.0" text="yorumu" />
+                  <TableColumn fx:id="point" text="puanı" />
               </columns>
             </TableView>
-            <TableView fx:id="user_inf" layoutX="174.0" layoutY="5.0" prefHeight="399.0" prefWidth="827.0">
+            <TableView fx:id="user_inf" layoutX="174.0" layoutY="-2.0" prefHeight="406.0" prefWidth="827.0">
                <columns>
                   <TableColumn fx:id="user1_id" prefWidth="183.0" text="id" />
                   <TableColumn fx:id="user1_name" prefWidth="146.0" text="Adı" />
@@ -76,12 +79,13 @@
             </TableView>
             <AnchorPane layoutX="173.0" layoutY="404.0" prefHeight="200.0" prefWidth="827.0">
                <children>
-                  <TextField layoutX="52.0" layoutY="20.0" />
-                  <TextField layoutX="52.0" layoutY="76.0" />
-                  <TextField layoutX="52.0" layoutY="138.0" />
-                  <Button fx:id="insert" layoutX="413.0" layoutY="14.0" mnemonicParsing="false" onAction="#inser_click" prefHeight="37.0" prefWidth="91.0" text="Insert" />
-                  <Button fx:id="delete" layoutX="413.0" layoutY="70.0" mnemonicParsing="false" onAction="#delete_click" prefHeight="37.0" prefWidth="91.0" text="Delete" />
-                  <Button fx:id="update" layoutX="413.0" layoutY="132.0" mnemonicParsing="false" onAction="#update_click" prefHeight="37.0" prefWidth="91.0" text="Update" />
+                  <TextField fx:id="imdb" layoutX="40.0" layoutY="73.0" prefHeight="25.0" prefWidth="218.0" promptText="imdb puanı" />
+                  <TextField fx:id="lnk" layoutX="40.0" layoutY="166.0" prefHeight="25.0" prefWidth="218.0" promptText="linki" />
+                  <Button fx:id="insert" layoutX="591.0" layoutY="11.0" mnemonicParsing="false" onAction="#inser_click" prefHeight="37.0" prefWidth="91.0" text="Insert" />
+                  <Button fx:id="delete" layoutX="591.0" layoutY="67.0" mnemonicParsing="false" onAction="#delete_click" prefHeight="37.0" prefWidth="91.0" text="Delete" />
+                  <Button fx:id="update" layoutX="591.0" layoutY="129.0" mnemonicParsing="false" onAction="#update_click" prefHeight="37.0" prefWidth="91.0" text="Update" />
+                  <TextField fx:id="film" layoutX="40.0" layoutY="30.0" prefHeight="25.0" prefWidth="218.0" promptText="film adi" />
+                  <TextArea fx:id="sub" layoutX="40.0" layoutY="120.0" prefHeight="37.0" prefWidth="218.0" promptText="konusu" />
                </children>
             </AnchorPane>
          </children>
