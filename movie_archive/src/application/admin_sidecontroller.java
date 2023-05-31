@@ -22,6 +22,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
@@ -133,6 +134,9 @@ public class admin_sidecontroller {
 
     @FXML
     private TextField imdb;
+    
+    @FXML
+    private TextField iddd;
 
     
     
@@ -223,7 +227,13 @@ public class admin_sidecontroller {
 
     @FXML
     void btn1_click(ActionEvent event) {
-
+    	insert.setVisible(false);
+    	delete.setVisible(false);
+    	update.setVisible(false);
+    	film.setVisible(false);
+    	imdb.setVisible(false);
+    	sub.setVisible(false);
+    	lnk.setVisible(false);
     	user_inf.setVisible(false);
     	movie.setVisible(false);
     	comments.setVisible(true);
@@ -232,6 +242,13 @@ public class admin_sidecontroller {
 
     @FXML
     void btn2_click(ActionEvent event) {
+    	insert.setVisible(false);
+    	delete.setVisible(false);
+    	update.setVisible(false);
+    	film.setVisible(false);
+    	imdb.setVisible(false);
+    	sub.setVisible(false);
+    	lnk.setVisible(false);
     	comments.setVisible(false);
     	movie.setVisible(false);
     	user_inf.setVisible(true);
@@ -240,6 +257,13 @@ public class admin_sidecontroller {
 
     @FXML
     void btn3_click(ActionEvent event) {
+    	insert.setVisible(true);
+    	delete.setVisible(true);
+    	update.setVisible(true);
+    	film.setVisible(true);
+    	imdb.setVisible(true);
+    	sub.setVisible(true);
+    	lnk.setVisible(true);
     	comments.setVisible(false);
     	user_inf.setVisible(false);
     	movie.setVisible(true);
@@ -254,7 +278,21 @@ public class admin_sidecontroller {
     
     @FXML
     void delete_click(ActionEvent event) {
+    	sql="delete from movies_inf  where movie_id=? and movie_name=? ";
+    	try {
+    		sorgu=baglanti.prepareStatement(sql);
+    		sorgu.setString(1, iddd.getText().trim());
+    		sorgu.setString(2, film.getText().trim());
+    		sorgu.executeUpdate();
+    		degergetir(movie);
+    		
     
+    	}
+    	catch(Exception e) {
+    		
+    		}
+    	
+    	
     }
 
     @FXML
@@ -278,7 +316,37 @@ public class admin_sidecontroller {
 
     @FXML
     void update_click(ActionEvent event) {
+sql="update movies_inf set imdb_point=?,subject=?, movie_link=?,movie_name=? where movie_id=?";
+try {
+	sorgu=baglanti.prepareStatement(sql);
 
+	sorgu.setString(1, imdb.getText().trim());
+	sorgu.setString(2, sub.getText().trim());
+	sorgu.setString(3, lnk.getText().trim());
+	sorgu.setString(4, film.getText().trim());
+	sorgu.setString(5, iddd.getText().trim());
+	sorgu.executeUpdate();
+	degergetir(movie);
+
+} catch (Exception e) {
+	e.printStackTrace();
+}
+
+    }
+    
+    @FXML
+    void movie_click(MouseEvent event) {
+    	Kayitlar kayit=new Kayitlar();
+    	kayit=(Kayitlar) movie.getItems().get(movie.getSelectionModel().getSelectedIndex());
+    	iddd.setText(String.valueOf(kayit.getMovie_id()));
+    	film.setText(kayit.getMovie_name());
+    	imdb.setText(String.valueOf(kayit.getImdb_point()));
+    	sub.setText(kayit.getSubject());
+    	lnk.setText(kayit.getMovie_link());
+    	
+    	
+    	
+    	
     }
 
 
@@ -288,6 +356,15 @@ public class admin_sidecontroller {
     	comments.setVisible(false);
     	user_inf.setVisible(false);
     	movie.setVisible(false);
+    	iddd.setVisible(false);
+    	film.setVisible(false);
+    	imdb.setVisible(false);
+    	sub.setVisible(false);
+    	lnk.setVisible(false);
+    	insert.setVisible(false);
+    	delete.setVisible(false);
+    	update.setVisible(false);
+    	
     	
     	
  
