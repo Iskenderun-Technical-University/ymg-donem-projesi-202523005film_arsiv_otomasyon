@@ -54,7 +54,6 @@
               <columns>
                   <TableColumn fx:id="comment_id" prefWidth="66.0" text="comment_id" />
                   <TableColumn fx:id="movie1_id" prefWidth="111.0" text="film_id" />
-                  <TableColumn fx:id="user_id" prefWidth="94.0" text="kullanıcı_id" />
                 <TableColumn fx:id="usr_name" prefWidth="177.0" text="Adı" />
                   <TableColumn fx:id="commennts" prefWidth="298.0" text="yorumu" />
                   <TableColumn fx:id="point" text="puanı" />

@@ -93,8 +93,7 @@ public class admin_sidecontroller {
     @FXML
     private TableColumn<kayitlar2, String> user1_name;
 
-    @FXML
-    private TableColumn<kayitlar3, Integer> user_id;
+ 
 
     @FXML
     private TableView<kayitlar2> user_inf;
@@ -151,13 +150,13 @@ public class admin_sidecontroller {
     		ResultSet getirilen=sorgu.executeQuery();
     		while(getirilen.next()) {
     			Kayitlarliste.add(new Kayitlar(getirilen.getInt("movie_id"),getirilen.getString("movie_name"),getirilen.getDouble("imdb_point"),getirilen.getString("subject"),getirilen.getString("movie_link")));
-    		}
+    		
     		link.setCellValueFactory(new PropertyValueFactory<> ("movie_link"));
     		movie_id.setCellValueFactory(new PropertyValueFactory<> ("movie_id"));
     		movie_name.setCellValueFactory(new PropertyValueFactory<> ("movie_name"));
     		imdb_point.setCellValueFactory(new PropertyValueFactory<> ("imdb_point"));
     		subject.setCellValueFactory(new PropertyValueFactory<> ("subject"));
-    	
+    		}
     		movie.setItems(Kayitlarliste);
     		
 		} catch (Exception e) {
@@ -200,10 +199,10 @@ public class admin_sidecontroller {
     		sorgu=baglanti.prepareStatement(sql);
     		ResultSet getirilen=sorgu.executeQuery();
     		while(getirilen.next()) {
-    			kayitlarliste3.add(new kayitlar3(getirilen.getInt("comment_id"), getirilen.getInt("movie1_id"),getirilen.getInt("user_id"),getirilen.getString("usr_name"),getirilen.getString("commennts"),getirilen.getDouble("point")));
+    			kayitlarliste3.add(new kayitlar3(getirilen.getInt("comment_id"), getirilen.getInt("movie1_id"),getirilen.getString("usr_name"),getirilen.getString("commennts"),getirilen.getDouble("point")));
     			comment_id.setCellValueFactory(new PropertyValueFactory<>("comment_id"));
     			movie1_id.setCellValueFactory(new PropertyValueFactory<>("movie1_id"));
-    			user_id.setCellValueFactory(new PropertyValueFactory<>("user_id"));
+    	
     			usr_name.setCellValueFactory(new PropertyValueFactory<>("usr_name"));
     			commennts.setCellValueFactory(new PropertyValueFactory<>("commennts"));
     			point.setCellValueFactory(new PropertyValueFactory<>("point"));
@@ -487,7 +486,6 @@ try {
     public static class kayitlar3{
     	private int comment_id;
     	private int movie1_id;
-    	private int user_id;
     	private String usr_name;
     	private String commennts;
     	private double point;
@@ -495,10 +493,10 @@ try {
     	    	
     	    	
     	    }
-    	    kayitlar3(int comment_id,int movie1_id,int user_id,String usr_name,String commennts,double point){
+    	    kayitlar3(int comment_id,int movie1_id,String usr_name,String commennts,double point){
     	    	this.comment_id=comment_id;
     	    	this.movie1_id=movie1_id;
-    	    	this.user_id=user_id;
+    	    	
     	    	this.usr_name=usr_name;
     	    	this.commennts=commennts;
     	    	this.point=point;
@@ -515,12 +513,7 @@ try {
 			public void setMovie1_id(int movie1_id) {
 				this.movie1_id = movie1_id;
 			}
-			public int getUser_id() {
-				return user_id;
-			}
-			public void setUser_id(int user_id) {
-				this.user_id = user_id;
-			}
+
 			public String getUsr_name() {
 				return usr_name;
 			}

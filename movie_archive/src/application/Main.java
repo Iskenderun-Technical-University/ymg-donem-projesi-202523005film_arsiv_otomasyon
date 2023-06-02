@@ -11,7 +11,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			StackPane root = (StackPane)FXMLLoader.load(getClass().getResource("admin_side.fxml"));
+			StackPane root = (StackPane)FXMLLoader.load(getClass().getResource("user_side.fxml"));
 			Scene scene = new Scene(root,1000,600);
 			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			primaryStage.setScene(scene);
