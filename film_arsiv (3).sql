@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 03 Haz 2023, 19:53:23
+-- Üretim Zamanı: 03 Haz 2023, 22:06:21
 -- Sunucu sürümü: 10.4.28-MariaDB
 -- PHP Sürümü: 8.1.17
 
@@ -63,7 +63,15 @@ INSERT INTO `comminicate` (`comment_id`, `movie1_id`, `usr_name`, `commennts`, `
 (6, 'scarface', 'baybay', 'güzelll değil', 7.20),
 (7, 'scarface', 'baybay', 'güzelll değil', 7.20),
 (8, 'scarface', 'baybay', 'güzelll değil', 7.20),
-(9, 'yoruldum izlerken', 'bleda', 'Ahlat ağacı', 3.50);
+(9, 'ahlat ağacı', 'bleda', 'güzel değildi', 8.60),
+(10, 'fight club', 'ahmet', 'güzeldi', 8.50),
+(11, 'Shutter Island', 'bleda', 'güzel değildi', 8.60),
+(12, 'Shutter Island', 'ali', 'güzel', 8.70),
+(13, 'otomatik portakal', 'ayşe', 'güzel', 6.20),
+(14, 'Shutter Island', 'fatma', 'güzel değildi', 0.00),
+(15, 'otomatik portakal', 'levent', 'ortalama', 5.00),
+(16, 'scarface', 'melike', 'güzel değildi', 3.00),
+(17, 'scarface', 'fazıl', 'yeterince güzel değildi', 3.30);
 
 -- --------------------------------------------------------
 
@@ -86,7 +94,15 @@ INSERT INTO `login_form` (`user_id`, `user_name`, `user_mail`, `user_password`) 
 (1, 'bleda', 'bleda@hotmail.com', 'a'),
 (17, 'baybars', 'baybars@hotmail.com', 'a'),
 (18, 'semanur', 'sema@hotmail.com', 'a'),
-(19, 'defne', 'defne@hotmail.com', 'b');
+(19, 'defne', 'defne@hotmail.com', 'b'),
+(20, 'a', 'b', 'c'),
+(21, 'bleda', 'bleda@hotmail.com', 'a'),
+(22, 'ahmet', 'ahmet@hotmail.com', 'c'),
+(23, 'mehmet', 'mehmet@hotmail.com', 'a'),
+(24, 'fatma', 'fatma@hotmail.com', '1'),
+(25, 'levent', 'levent@hotmail.com', 'a'),
+(26, 'melek', 'melek@hotmail.com', 'a'),
+(27, 'fazıl', 'fazıl@hotmail.com', 'a');
 
 -- --------------------------------------------------------
 
@@ -118,9 +134,10 @@ INSERT INTO `movies_inf` (`movie_id`, `movie_name`, `imdb_point`, `subject`, `mo
 (12, 'Everything Everywhere All at Once', 8.20, 'Çamaşırhanesi başarısızlığın eşiğinde sallanırken ve pısırık kocası Waymond ile olan evliliğinden dolayı çok çalışan Evelyn Wang, yargılayıcı babası Gong Gong ve kızı Joy ile olan yıpranmış bir ilişki de dahil olmak üzere her şeyle başa çıkmak için mücadele ediyor.', 'https://kultfilmler.com/gone-girl-kayip-kiz-izle/'),
 (13, 'The Pianist', 8.50, 'Piyanist, İkinci Dünya Savaşı sırasında yaşanan gerçek bir dramı konu alır. Polonya’lı ünlü piyanist Wladyslaw Szpilman’ın anılarını anlattığı aynı isimli kitaptan sinemaya uyarlanan film, Nazi işgali altındaki Polonya’da yaşamanın imkansızlaştırıldığı bir dönemde, bir şekilde esir kampına gitmekten kurtulan ünlü piyanistin Varşova’nın kenar mahallelerindeki hayatta kalma mücadelesine odaklanır. Varoşlarda tam anlamıyla sefil bir hayat süren müzisyen, diğer halkla birlikte, kıtlığa ve aşağılanmalara maruz kalsa da kahramanca mücadele edecektir. Günü gelip oradan kaçma şansı bulduğundaysa başkentin harabelerine sığınacak, beklemediği bir anda gelen bir yardımla umudunu yeniden kazanacaktır.', 'https://kultfilmler.com/the-pianist-piyanist-izle/'),
 (14, 'Requiem For A Dream', 8.30, 'Sara Goldfarb, tv bağımlısı dul bir kadındır. Oğlu Harry ise kız arkadaşı Marion ve uyuşturucu satıcısı Tyrone\'la takılan madde bağımlısı bir çocuktur. Sara, bir tv şovuna çıkmaya hak kazanır bu yüzden çok heyecanlıdır. Ödül olan kırmızı elbiseye girebilmek için kilo vermeye çalışır ve diyet haplarından kullanmaya başlar. Diğer yandan Harry ve arkadaşları, hiç durmadan eroin ve kokain kullanmaya devam ediyorlar. Bu bağımlılıklar zamanla aileyi bir felakete sürükleyecektir...', 'https://kultfilmler.com/requiem-for-a-dream-bir-ruya-icin-agit/'),
-(15, 'Seven', 8.60, '7 ölümcül günahı işleyenleri kendi vahşi yöntemleriyle öldüren bir seri katil ve onun peşindeki iki polis dedektifin çabalarını konu alan bir gerilim başyapıtı.Yönetmen David Fincher imzalı film, gerek sürükleyici konusu gerekse oyuncuların performanslarıyla gişede büyük başarı yakalamıştı. En iyi kurgu dalında 1996\'da ödüle aday olan film bu ödülü alamamıştı.Özellikle sürpriz kötü adamı ve çarpıcı finali ile şimdiden bir klasik olarak yerini aldı.', 'https://kultfilmler.com/se7en-yedi-izle/'),
+(15, 'Se7en', 8.60, '7 ölümcül günahı işleyenleri kendi vahşi yöntemleriyle öldüren bir seri katil ve onun peşindeki iki polis dedektifin çabalarını konu alan bir gerilim başyapıtı.Yönetmen David Fincher imzalı film, gerek sürükleyici konusu gerekse oyuncuların performanslarıyla gişede büyük başarı yakalamıştı. En iyi kurgu dalında 1996\'da ödüle aday olan film bu ödülü alamamıştı.Özellikle sürpriz kötü adamı ve çarpıcı finali ile şimdiden bir klasik olarak yerini aldı.', 'https://kultfilmler.com/se7en-yedi-izle/'),
 (17, 'A Clockwork Orange', 8.30, 'Alex Delarge, genelde cinsellikle kurbanlarına saygı göstermeden şiddet davranışları sergileyen bir haydut çetesinin \"drooglar\" lideridir. Alex, Ludwig van Beethoven\'ın eserlerini sever. Şiddet davranışları sergilerken onu dinlediğinde, daha fazla yoğunlaşır ve ilham alır. Sonunda Alex cinayet ve tecavüzden tutuklanır mahkum edilir. Hapiste şiddet davranışını azaltmaya yönelik bir deney için gönüllü olur ancak işler planlandığı gibi gitmez....', 'https://kultfilmler.com/otomatik-portakal-a-clockwork-orange/'),
-(18, 'Life Is Beautiful', 8.60, 'Roberto Benigni imzalı bu İtalyan filmi, savaşın kurbanları üstündeki tesirini ve çocuk dimağlardaki yansımasını öyle hoş bir üslupla anlatmış ki, bu şaheser üç Oscar\'la ödüllendirilmiş. Birkaç sene önce evlenip, bir de çocukları olan mutlu bir çiftin yolları İkinci Dünya Savaşı ile ayrılıyor. Tutsak kampına çocuğuyla beraber sevk edilen Guido için güç şartlara sabretmek ikincil emel olarak kalıyor ve oğluyla bir oyun oynamaya başlıyor. Bu oyun savaşın korkusunu oğlunun sezmemesi üzerine kurulu..', 'https://kultfilmler.com/life-is-beautiful-hayat-guzeldir-izle/');
+(18, 'Life Is Beautiful', 8.60, 'Roberto Benigni imzalı bu İtalyan filmi, savaşın kurbanları üstündeki tesirini ve çocuk dimağlardaki yansımasını öyle hoş bir üslupla anlatmış ki, bu şaheser üç Oscar\'la ödüllendirilmiş. Birkaç sene önce evlenip, bir de çocukları olan mutlu bir çiftin yolları İkinci Dünya Savaşı ile ayrılıyor. Tutsak kampına çocuğuyla beraber sevk edilen Guido için güç şartlara sabretmek ikincil emel olarak kalıyor ve oğluyla bir oyun oynamaya başlıyor. Bu oyun savaşın korkusunu oğlunun sezmemesi üzerine kurulu..', 'https://kultfilmler.com/life-is-beautiful-hayat-guzeldir-izle/'),
+(23, 'Irreversible', 7.10, 'Alex adında genç bir kadın bir tünelde yabancı bir kişi tarafından tecavüze uğrar. Erkek arkadaşı Marcus ve eski erkek arkadaşı Pierre, adaleti kendileri sağlamaya karar verir. Film sebep ve sonucun yıkıcı doğasını ve zamanın her şeyi nasıl yok ettiğini hem güzel hem de korkunç yönleriyle gözler önüne seriyor.', 'https://kultfilmler.com/irreversible-donus-yok-izle/');
 
 --
 -- Dökümü yapılmış tablolar için indeksler
@@ -164,19 +181,19 @@ ALTER TABLE `admin_login`
 -- Tablo için AUTO_INCREMENT değeri `comminicate`
 --
 ALTER TABLE `comminicate`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `login_form`
 --
 ALTER TABLE `login_form`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `movies_inf`
 --
 ALTER TABLE `movies_inf`
-  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `movie_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
