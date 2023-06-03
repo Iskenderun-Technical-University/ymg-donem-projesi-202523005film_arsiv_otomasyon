@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Anamakine: 127.0.0.1
--- Üretim Zamanı: 02 Haz 2023, 22:34:36
+-- Üretim Zamanı: 03 Haz 2023, 19:53:23
 -- Sunucu sürümü: 10.4.28-MariaDB
 -- PHP Sürümü: 8.1.17
 
@@ -59,7 +59,11 @@ CREATE TABLE `comminicate` (
 --
 
 INSERT INTO `comminicate` (`comment_id`, `movie1_id`, `usr_name`, `commennts`, `point`) VALUES
-(5, 'otomatik portakal', 'yorgun kedi', 'güzel bir film', 10.00);
+(5, 'otomatik portakal', 'yorgun kedi', 'güzel bir film', 10.00),
+(6, 'scarface', 'baybay', 'güzelll değil', 7.20),
+(7, 'scarface', 'baybay', 'güzelll değil', 7.20),
+(8, 'scarface', 'baybay', 'güzelll değil', 7.20),
+(9, 'yoruldum izlerken', 'bleda', 'Ahlat ağacı', 3.50);
 
 -- --------------------------------------------------------
 
@@ -160,7 +164,7 @@ ALTER TABLE `admin_login`
 -- Tablo için AUTO_INCREMENT değeri `comminicate`
 --
 ALTER TABLE `comminicate`
-  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `comment_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- Tablo için AUTO_INCREMENT değeri `login_form`
