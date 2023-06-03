@@ -199,7 +199,7 @@ public class admin_sidecontroller {
     		sorgu=baglanti.prepareStatement(sql);
     		ResultSet getirilen=sorgu.executeQuery();
     		while(getirilen.next()) {
-    			kayitlarliste3.add(new kayitlar3(getirilen.getInt("comment_id"), getirilen.getInt("movie1_id"),getirilen.getString("usr_name"),getirilen.getString("commennts"),getirilen.getDouble("point")));
+    			kayitlarliste3.add(new kayitlar3(getirilen.getInt("comment_id"), getirilen.getString("movie1_id"),getirilen.getString("usr_name"),getirilen.getString("commennts"),getirilen.getDouble("point")));
     			comment_id.setCellValueFactory(new PropertyValueFactory<>("comment_id"));
     			movie1_id.setCellValueFactory(new PropertyValueFactory<>("movie1_id"));
     	
@@ -485,7 +485,7 @@ try {
     
     public static class kayitlar3{
     	private int comment_id;
-    	private int movie1_id;
+    	private String movie1_id;
     	private String usr_name;
     	private String commennts;
     	private double point;
@@ -493,7 +493,7 @@ try {
     	    	
     	    	
     	    }
-    	    kayitlar3(int comment_id,int movie1_id,String usr_name,String commennts,double point){
+    	    kayitlar3(int comment_id,String movie1_id,String usr_name,String commennts,double point){
     	    	this.comment_id=comment_id;
     	    	this.movie1_id=movie1_id;
     	    	
@@ -507,10 +507,10 @@ try {
 			public void setComment_id(int comment_id) {
 				this.comment_id = comment_id;
 			}
-			public int getMovie1_id() {
+			public String getMovie1_id() {
 				return movie1_id;
 			}
-			public void setMovie1_id(int movie1_id) {
+			public void setMovie1_id(String movie1_id) {
 				this.movie1_id = movie1_id;
 			}
 

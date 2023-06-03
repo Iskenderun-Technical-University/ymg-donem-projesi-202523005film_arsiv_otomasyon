@@ -17,7 +17,7 @@
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="614.0" fitWidth="820.0" layoutY="-14.0" pickOnBounds="true" smooth="false">
+            <ImageView fitHeight="614.0" fitWidth="820.0" layoutY="4.0" pickOnBounds="true" smooth="false">
                <image>
                   <Image url="@../../../../resim/Ekran%20görüntüsü%202023-05-12%20194836.png" />
                </image>
@@ -52,17 +52,17 @@
                   <Button fx:id="btn3" mnemonicParsing="false" onAction="#btn3_click" prefHeight="94.0" prefWidth="138.0" text="çıkış" />
                </children>
             </VBox>
-            <TextField fx:id="txt1" layoutX="377.0" layoutY="426.0" prefHeight="25.0" prefWidth="66.0" />
-            <Hyperlink fx:id="lnk" layoutX="289.0" layoutY="564.0" onAction="#openlink" prefHeight="23.0" prefWidth="243.0" style="-fx-background-color: #ffff;" text="Hyperlink" />
-            <Button fx:id="btn5" layoutX="611.0" layoutY="523.0" mnemonicParsing="false" onAction="#btn5_click" prefHeight="41.0" prefWidth="138.0" text="Ara" />
-            <ComboBox fx:id="cmbx" layoutX="559.0" layoutY="413.0" onAction="#cmbx_click" prefHeight="25.0" prefWidth="243.0" />
-            <Button fx:id="btn4" layoutX="611.0" layoutY="457.0" mnemonicParsing="false" onAction="#btn4_click" prefHeight="41.0" prefWidth="138.0" text="Yorum Ekle" />
-            <RadioButton fx:id="rd1" layoutX="611.0" layoutY="497.0" mnemonicParsing="false" onAction="#rd1_clk" prefHeight="17.0" prefWidth="92.0" text="İsme göre" textFill="#ff0d0d" />
-            <RadioButton fx:id="rd2" layoutX="703.0" layoutY="497.0" mnemonicParsing="false" onAction="#rd2_click" text="İmdb ye göre" textFill="#ff0d0d" />
-            <TextField fx:id="txt2" layoutX="14.0" layoutY="486.0" prefHeight="25.0" prefWidth="66.0" />
-            <TextField fx:id="txt6" layoutX="106.0" layoutY="486.0" prefHeight="25.0" prefWidth="243.0" />
-            <TextField fx:id="txt7" layoutX="363.0" layoutY="486.0" prefHeight="25.0" prefWidth="66.0" />
-            <TextField fx:id="txt5" layoutX="106.0" layoutY="445.0" prefHeight="25.0" prefWidth="243.0" />
+            <Hyperlink fx:id="lnk" layoutX="559.0" layoutY="421.0" onAction="#openlink" prefHeight="23.0" prefWidth="243.0" style="-fx-background-color: #ffff;" text="Hyperlink" />
+            <Button fx:id="btn5" layoutX="567.0" layoutY="565.0" mnemonicParsing="false" onAction="#btn5_click" prefHeight="41.0" prefWidth="138.0" text="Ara" />
+            <ComboBox fx:id="cmbx" layoutX="138.0" layoutY="413.0" onAction="#cmbx_click" prefHeight="25.0" prefWidth="243.0" />
+            <Button fx:id="btn4" layoutX="567.0" layoutY="450.0" mnemonicParsing="false" onAction="#btn4_click" prefHeight="41.0" prefWidth="138.0" text="Yorum Ekle" />
+            <RadioButton fx:id="rd1" layoutX="273.0" layoutY="568.0" mnemonicParsing="false" onAction="#rd1_clk" prefHeight="17.0" prefWidth="92.0" text="İsme göre" textFill="#ff0d0d" />
+            <RadioButton fx:id="rd2" layoutX="152.0" layoutY="568.0" mnemonicParsing="false" onAction="#rd2_click" text="İmdb ye göre" textFill="#ff0d0d" />
+            <TextField fx:id="txt2" layoutX="30.0" layoutY="524.0" prefHeight="25.0" prefWidth="243.0" />
+            <TextField fx:id="txt6" layoutX="30.0" layoutY="483.0" prefHeight="25.0" prefWidth="243.0" />
+            <TextField fx:id="txt7" layoutX="30.0" layoutY="564.0" prefHeight="25.0" prefWidth="92.0" />
+            <TextField fx:id="txt5" layoutX="30.0" layoutY="444.0" prefHeight="25.0" prefWidth="243.0" />
+            <Button fx:id="btn61" layoutX="567.0" layoutY="504.0" mnemonicParsing="false" onAction="#btn61_click" prefHeight="41.0" prefWidth="138.0" text="Yorumu Düzenle" />
          </children>
       </AnchorPane>
    </children>

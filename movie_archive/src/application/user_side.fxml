@@ -12,32 +12,33 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <StackPane prefHeight="600.0" prefWidth="810.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.user_sidecontroller">
    <children>
       <AnchorPane prefHeight="200.0" prefWidth="200.0">
          <children>
-            <ImageView fitHeight="614.0" fitWidth="820.0" layoutY="-14.0" pickOnBounds="true" smooth="false">
+            <ImageView fitHeight="614.0" fitWidth="820.0" layoutY="4.0" pickOnBounds="true" smooth="false">
                <image>
                   <Image url="@../../../../resim/Ekran%20görüntüsü%202023-05-12%20194836.png" />
                </image>
             </ImageView>
             <TableView fx:id="filmler" layoutX="136.0" layoutY="-2.0" onMouseClicked="#table_mouse_click" prefHeight="408.0" prefWidth="684.0">
                <columns>
-                  <TableColumn fx:id="movie_id" prefWidth="54.0" text="film_id" />
-                  <TableColumn fx:id="movie_name" prefWidth="149.0" text="film adı" />
-                  <TableColumn fx:id="imdb_point" prefWidth="143.0" text="imdb puanı" />
-                  <TableColumn fx:id="subject" minWidth="5.0" prefWidth="177.0" text="konusu" />
-                  <TableColumn fx:id="link" prefWidth="163.0" text="link" />
+                  <TableColumn fx:id="movie_id" prefWidth="54.0" text="Movie_id" />
+                  <TableColumn fx:id="movie_name" prefWidth="149.0" text="Movie_name" />
+                  <TableColumn fx:id="imdb_point" prefWidth="143.0" text="İmdb_Point" />
+                  <TableColumn fx:id="subject" minWidth="5.0" prefWidth="177.0" text="Subject" />
+                  <TableColumn fx:id="link" prefWidth="163.0" text="Link" />
                </columns>
             </TableView>
             <TableView fx:id="yorumlar" layoutX="136.0" layoutY="4.0" onMouseClicked="#table2_mouse_click" prefHeight="408.0" prefWidth="684.0">
               <columns>
-                <TableColumn fx:id="comment_id" prefWidth="77.0" text="comment_id" />
-                <TableColumn fx:id="movie1_id" prefWidth="138.0" text="film adı" />
-                  <TableColumn fx:id="usr_name" minWidth="5.0" prefWidth="142.0" text="Adı" />
-                  <TableColumn fx:id="commennts" prefWidth="233.0" text="yorumu" />
-                  <TableColumn fx:id="point" prefWidth="93.0" text="puanı" />
+                <TableColumn fx:id="comment_id" prefWidth="77.0" text="Comment_id" />
+                <TableColumn fx:id="movie1_id" prefWidth="138.0" text="Movie_name" />
+                  <TableColumn fx:id="usr_name" minWidth="5.0" prefWidth="142.0" text="User_name" />
+                  <TableColumn fx:id="commennts" prefWidth="233.0" text="Comment" />
+                  <TableColumn fx:id="point" prefWidth="93.0" text="Point" />
               </columns>
             </TableView>
             <VBox prefHeight="425.0" prefWidth="138.0">
@@ -47,22 +48,40 @@
                         <Image url="@../../../../resim/cccc.jpg" />
                      </image>
                   </ImageView>
-                  <Button fx:id="btn1" alignment="CENTER" mnemonicParsing="false" onAction="#btn1_click" prefHeight="102.0" prefWidth="141.0" text="Yorumları Görüntüle" />
-                  <Button fx:id="btn2" mnemonicParsing="false" onAction="#btn2_click" prefHeight="103.0" prefWidth="139.0" text="Filmleri Görüntüle" />
-                  <Button fx:id="btn3" mnemonicParsing="false" onAction="#btn3_click" prefHeight="94.0" prefWidth="138.0" text="çıkış" />
+                  <Button fx:id="btn1" alignment="CENTER" mnemonicParsing="false" onAction="#btn1_click" prefHeight="102.0" prefWidth="141.0" text="View Comments">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="btn2" mnemonicParsing="false" onAction="#btn2_click" prefHeight="103.0" prefWidth="139.0" text="View Movies">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
+                  <Button fx:id="btn3" mnemonicParsing="false" onAction="#btn3_click" prefHeight="94.0" prefWidth="138.0" text="Exit">
+                     <font>
+                        <Font name="System Bold" size="12.0" />
+                     </font></Button>
                </children>
             </VBox>
-            <TextField fx:id="txt1" layoutX="377.0" layoutY="426.0" prefHeight="25.0" prefWidth="66.0" />
-            <Hyperlink fx:id="lnk" layoutX="289.0" layoutY="564.0" onAction="#openlink" prefHeight="23.0" prefWidth="243.0" style="-fx-background-color: #ffff;" text="Hyperlink" />
-            <Button fx:id="btn5" layoutX="611.0" layoutY="523.0" mnemonicParsing="false" onAction="#btn5_click" prefHeight="41.0" prefWidth="138.0" text="Ara" />
-            <ComboBox fx:id="cmbx" layoutX="559.0" layoutY="413.0" onAction="#cmbx_click" prefHeight="25.0" prefWidth="243.0" />
-            <Button fx:id="btn4" layoutX="611.0" layoutY="457.0" mnemonicParsing="false" onAction="#btn4_click" prefHeight="41.0" prefWidth="138.0" text="Yorum Ekle" />
-            <RadioButton fx:id="rd1" layoutX="611.0" layoutY="497.0" mnemonicParsing="false" onAction="#rd1_clk" prefHeight="17.0" prefWidth="92.0" text="İsme göre" textFill="#ff0d0d" />
-            <RadioButton fx:id="rd2" layoutX="703.0" layoutY="497.0" mnemonicParsing="false" onAction="#rd2_click" text="İmdb ye göre" textFill="#ff0d0d" />
-            <TextField fx:id="txt2" layoutX="14.0" layoutY="486.0" prefHeight="25.0" prefWidth="66.0" />
-            <TextField fx:id="txt6" layoutX="106.0" layoutY="486.0" prefHeight="25.0" prefWidth="243.0" />
-            <TextField fx:id="txt7" layoutX="363.0" layoutY="486.0" prefHeight="25.0" prefWidth="66.0" />
-            <TextField fx:id="txt5" layoutX="106.0" layoutY="445.0" prefHeight="25.0" prefWidth="243.0" />
+            <Hyperlink fx:id="lnk" alignment="CENTER" layoutX="559.0" layoutY="421.0" onAction="#openlink" prefHeight="23.0" prefWidth="243.0" style="-fx-background-color: #ffff;" text="Links" />
+            <Button fx:id="btn5" layoutX="567.0" layoutY="565.0" mnemonicParsing="false" onAction="#btn5_click" prefHeight="41.0" prefWidth="138.0" text="Find">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <ComboBox fx:id="cmbx" layoutX="138.0" layoutY="413.0" onAction="#cmbx_click" prefHeight="25.0" prefWidth="243.0" promptText="Movie list" />
+            <Button fx:id="btn4" layoutX="567.0" layoutY="450.0" mnemonicParsing="false" onAction="#btn4_click" prefHeight="41.0" prefWidth="138.0" text="Add Comment">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
+            <RadioButton fx:id="rd1" layoutX="273.0" layoutY="568.0" mnemonicParsing="false" onAction="#rd1_clk" prefHeight="17.0" prefWidth="92.0" text="Name" textFill="#ff0d0d" />
+            <RadioButton fx:id="rd2" layoutX="152.0" layoutY="568.0" mnemonicParsing="false" onAction="#rd2_click" text="İmdb " textFill="#ff0d0d" />
+            <TextField fx:id="txt2" layoutX="30.0" layoutY="524.0" prefHeight="25.0" prefWidth="243.0" />
+            <TextField fx:id="txt6" layoutX="30.0" layoutY="483.0" prefHeight="25.0" prefWidth="243.0" />
+            <TextField fx:id="txt7" layoutX="30.0" layoutY="564.0" prefHeight="25.0" prefWidth="92.0" />
+            <TextField fx:id="txt5" layoutX="30.0" layoutY="444.0" prefHeight="25.0" prefWidth="243.0" />
+            <Button fx:id="btn61" layoutX="567.0" layoutY="504.0" mnemonicParsing="false" onAction="#btn61_click" prefHeight="41.0" prefWidth="138.0" text="Update Comment">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Button>
          </children>
       </AnchorPane>
    </children>

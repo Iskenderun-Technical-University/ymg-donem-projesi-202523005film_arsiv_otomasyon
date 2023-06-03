@@ -52,14 +52,14 @@
             </ImageView>
             <TableView fx:id="comments" layoutX="175.0" layoutY="2.0" prefHeight="600.0" prefWidth="827.0">
               <columns>
-                  <TableColumn fx:id="comment_id" prefWidth="66.0" text="comment_id" />
-                  <TableColumn fx:id="movie1_id" prefWidth="111.0" text="film_id" />
-                <TableColumn fx:id="usr_name" prefWidth="177.0" text="Adı" />
-                  <TableColumn fx:id="commennts" prefWidth="298.0" text="yorumu" />
-                  <TableColumn fx:id="point" text="puanı" />
+                  <TableColumn fx:id="comment_id" prefWidth="66.0" text="Comment_id" />
+                  <TableColumn fx:id="movie1_id" prefWidth="111.0" text="Movie_name" />
+                <TableColumn fx:id="usr_name" prefWidth="177.0" text="User_name" />
+                  <TableColumn fx:id="commennts" prefWidth="361.0" text="Comment" />
+                  <TableColumn fx:id="point" prefWidth="111.0" text="Point" />
               </columns>
             </TableView>
-            <TableView fx:id="user_inf" layoutX="174.0" layoutY="-2.0" prefHeight="604.0" prefWidth="827.0">
+            <TableView fx:id="user_inf" layoutX="174.0" layoutY="2.0" prefHeight="600.0" prefWidth="827.0">
                <columns>
                   <TableColumn fx:id="user1_id" prefWidth="183.0" text="id" />
                   <TableColumn fx:id="user1_name" prefWidth="146.0" text="Adı" />
@@ -67,25 +67,25 @@
                   <TableColumn fx:id="user_pasword" prefWidth="169.0" text="şifresi" />
                </columns>
             </TableView>
-            <TableView fx:id="movie" layoutX="174.0" onMouseClicked="#movie_click" prefHeight="399.0" prefWidth="827.0">
+            <TableView fx:id="movie" layoutX="174.0" layoutY="-3.0" onMouseClicked="#movie_click" prefHeight="402.0" prefWidth="827.0">
                <columns>
-                  <TableColumn fx:id="movie_id" prefWidth="50.0" text="film id" />
-                  <TableColumn fx:id="movie_name" prefWidth="166.0" text="film adı" />
-                  <TableColumn fx:id="imdb_point" prefWidth="71.0" text="imdb puanı" />
-                  <TableColumn fx:id="subject" prefWidth="138.0" text="konusu" />
-                  <TableColumn fx:id="link" prefWidth="401.0" text="link" />
+                  <TableColumn fx:id="movie_id" prefWidth="67.0" text="Movie_id" />
+                  <TableColumn fx:id="movie_name" prefWidth="149.0" text="Movie_name" />
+                  <TableColumn fx:id="imdb_point" prefWidth="71.0" text="İmdb_Point" />
+                  <TableColumn fx:id="subject" prefWidth="138.0" text="Subject" />
+                  <TableColumn fx:id="link" prefWidth="401.0" text="Link" />
                </columns>
             </TableView>
             <AnchorPane layoutX="173.0" layoutY="404.0" prefHeight="200.0" prefWidth="827.0">
                <children>
-                  <TextField fx:id="imdb" layoutX="40.0" layoutY="92.0" prefHeight="25.0" prefWidth="218.0" promptText="imdb puanı" />
-                  <TextField fx:id="lnk" layoutX="40.0" layoutY="166.0" prefHeight="25.0" prefWidth="218.0" promptText="linki" />
+                  <TextField fx:id="imdb" layoutX="40.0" layoutY="92.0" prefHeight="25.0" prefWidth="218.0" promptText="İmdb_point" />
+                  <TextField fx:id="lnk" layoutX="40.0" layoutY="166.0" prefHeight="25.0" prefWidth="218.0" promptText="Link" />
                   <Button fx:id="insert" layoutX="591.0" layoutY="11.0" mnemonicParsing="false" onAction="#inser_click" prefHeight="37.0" prefWidth="91.0" text="Insert" />
                   <Button fx:id="delete" layoutX="591.0" layoutY="67.0" mnemonicParsing="false" onAction="#delete_click" prefHeight="37.0" prefWidth="91.0" text="Delete" />
                   <Button fx:id="update" layoutX="591.0" layoutY="129.0" mnemonicParsing="false" onAction="#update_click" prefHeight="37.0" prefWidth="91.0" text="Update" />
-                  <TextField fx:id="film" layoutX="40.0" layoutY="55.0" prefHeight="25.0" prefWidth="218.0" promptText="film adi" />
-                  <TextArea fx:id="sub" layoutX="40.0" layoutY="120.0" prefHeight="37.0" prefWidth="218.0" promptText="konusu" />
-                  <TextField fx:id="iddd" layoutX="40.0" layoutY="17.0" prefHeight="25.0" prefWidth="218.0" promptText="film_id" />
+                  <TextField fx:id="film" layoutX="40.0" layoutY="55.0" prefHeight="25.0" prefWidth="218.0" promptText="Movie_name" />
+                  <TextArea fx:id="sub" layoutX="40.0" layoutY="120.0" prefHeight="37.0" prefWidth="218.0" promptText="Suject" />
+                  <TextField fx:id="iddd" layoutX="40.0" layoutY="17.0" prefHeight="25.0" prefWidth="218.0" promptText="Movie_id" />
                </children>
             </AnchorPane>
          </children>

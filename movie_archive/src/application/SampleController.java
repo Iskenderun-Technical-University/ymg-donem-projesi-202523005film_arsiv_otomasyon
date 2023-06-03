@@ -140,7 +140,7 @@ String sqli;
     			try {
     				Stage stage1=new Stage();
     				StackPane stack = (StackPane)FXMLLoader.load(getClass().getResource("admin_side.fxml"));
-    				Scene scene = new Scene(stack,810,600);
+    				Scene scene = new Scene(stack,1000,600);
     				stage1.setScene(scene);
     				stage1.show();
                    Stage stage2=(Stage) btn1.getScene().getWindow();
@@ -201,7 +201,7 @@ String sqli;
     			try {
     				Stage stage1=new Stage();
     				StackPane stack = (StackPane)FXMLLoader.load(getClass().getResource("user_side.fxml"));
-    				Scene scene = new Scene(stack,810,600);
+    				Scene scene = new Scene(stack,850,600);
     				stage1.setScene(scene);
     				stage1.show();
                    Stage stage2=(Stage) btn1.getScene().getWindow();

@@ -109,7 +109,7 @@ public class user_sidecontroller {
     private TableColumn<Kayitlar, String> subject;
 
     @FXML
-    private TextField txt1;
+    private Button btn61;
     
     @FXML
     private TextField txt2;
@@ -192,7 +192,8 @@ public class user_sidecontroller {
     	filmler.setVisible(false);
     	yorumlar.setVisible(true);
     	cmbx.setVisible(true);
-    	
+    	btn61.setVisible(true);
+    	btn4.setVisible(true);
     	rd1.setVisible(false);
     	rd2.setVisible(false);
     	lnk.setVisible(false);
@@ -203,9 +204,10 @@ public class user_sidecontroller {
     	filmler.setVisible(true);
     	yorumlar.setVisible(false);
     	cmbx.setVisible(true);
-    	
-    	rd1.setVisible(true);
-    	rd2.setVisible(true);
+    	btn61.setVisible(false);
+    	btn4.setVisible(false);
+    	rd1.setVisible(false);
+    	rd2.setVisible(false);
     	lnk.setVisible(true);
     }
 
@@ -216,13 +218,45 @@ System.exit(0);
 
     @FXML
     void btn4_click(ActionEvent event) {
-    	
+    	sql="insert into comminicate(movie1_id,usr_name,commennts,point) values(?,?,?,?)";
+    	try {
+    		sorgu=baglanti.prepareStatement(sql);
+    		sorgu.setString(1, txt2.getText().trim());
+    		sorgu.setString(2, txt5.getText().trim());
+    		sorgu.setString(3, txt6.getText().trim());
+    		sorgu.setString(4, txt7.getText().trim());
+    		sorgu.executeUpdate();
+    		degergetir3(yorumlar);
+    		
+    
+    	}
+    	catch(Exception e) {
+    		
+    		}
     }
     	
 
     @FXML
     void btn5_click(ActionEvent event) {
 
+    }
+    
+    @FXML
+    void btn61_click(ActionEvent event) {
+    	sql = "update comminicate set commennts=?, point=? where usr_name=?";
+    	try {
+    	    sorgu = baglanti.prepareStatement(sql);
+
+    	    sorgu.setString(1, txt6.getText().trim());
+    	    sorgu.setString(2, txt7.getText().trim());
+    	    sorgu.setString(3, txt5.getText().trim());
+
+    	    sorgu.executeUpdate();
+    	    degergetir3(yorumlar);
+
+    	} catch (Exception e) {
+    	    e.printStackTrace();
+    	}
     }
 
     @FXML
@@ -243,7 +277,7 @@ System.exit(0);
     
     @FXML
     void table2_mouse_click(MouseEvent event) {
-    	txt1.setText(String.valueOf(yorumlar.getSelectionModel().getSelectedItem().comment_id));
+    	
     	txt2.setText(yorumlar.getSelectionModel().getSelectedItem().movie1_id);
     	txt5.setText(yorumlar.getSelectionModel().getSelectedItem().usr_name);
     	txt6.setText(yorumlar.getSelectionModel().getSelectedItem().commennts);
@@ -283,8 +317,9 @@ System.exit(0);
     	rd1.setVisible(false);
     	rd2.setVisible(false);
     	lnk.setVisible(false);
-    	
-    	
+    	btn5.setVisible(false);
+    	btn61.setVisible(false);
+    	btn4.setVisible(false);
     	for(int i =0;i<filmler.getItems().size();i++) {
     		cmbx.getItems().add(filmler.getItems().get(i).movie_name);
     		
